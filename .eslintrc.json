@@ -23,7 +23,7 @@
             "args": "after-used",
             "argsIgnorePattern": "^_",
             "ignoreRestSiblings": true,
-          },
+          }
         ],
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/ban-ts-comment": "off",
