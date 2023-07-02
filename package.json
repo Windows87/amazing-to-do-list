@@ -18,6 +18,8 @@
   },
   "scripts": {
     "lint": "eslint . --ext .js,.ts",
+    "cypress:open": "npx cypress open",
+    "cypress:test": "npx cypress run",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
