@@ -1,5 +1,5 @@
 describe('Add Task', () => {
   it('Yes', () => {
-    expect(true).toBeTruthy()
+    expect(true).to.be.equal(true)
   })
 })
