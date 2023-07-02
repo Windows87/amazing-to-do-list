@@ -25,7 +25,7 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
- Cypress-Test:
+  CypressTest:
    runs-on: ubuntu-latest
    steps:
      - name: Checkout GitCode
