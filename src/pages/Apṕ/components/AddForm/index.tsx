@@ -3,6 +3,7 @@ import Button from '../../../../components/Button'
 import Card from '../../../../components/Card'
 import Input from '../../../../components/Input'
 import { useTasks } from '../../../../contexts/TasksContext'
+import Form from './Form'
 
 const AddForm = () => {
   const [description, setDescription] = useState('')
@@ -30,10 +31,10 @@ const AddForm = () => {
 
   return (
     <Card>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Input placeholder='Tarefa' value={description} onChange={handleInputChange} />
         <Button disabled={verifyFields()}>Continuar</Button>
-      </form>
+      </Form>
     </Card>
   )
 }
