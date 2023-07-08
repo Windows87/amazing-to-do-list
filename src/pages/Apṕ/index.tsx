@@ -1,12 +1,15 @@
-import React from 'react'
-import Button from '../../components/Button'
+import Background from '../../components/Background'
+import AddForm from './components/AddForm'
+import TasksList from './components/TasksList'
+import TodoTitle from './components/TodoTitle'
 
 const App = () => {
   return (
-    <React.Fragment>
-      <p>Hello Humanity and CodeLab!</p>
-      <Button>Extreme coooool button!!</Button>
-    </React.Fragment>
+    <Background>
+      <TodoTitle />
+      <AddForm />
+      <TasksList />
+    </Background>
   )
 }
 
