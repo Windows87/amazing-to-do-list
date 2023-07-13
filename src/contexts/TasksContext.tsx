@@ -5,6 +5,7 @@ interface Value {
   tasks: Task[]
   handleTask: ({ description }: { description: string }) => void
   finishTasks: () => void
+  removeTask: ({ taskId }: { taskId: string }) => void
   checkTask: ({ taskId }: { taskId: string }) => void
 }
 
@@ -40,6 +41,10 @@ export function TasksProvider({ children }: ProviderProps) {
     setTasks(tasks.filter(t => !t.concluded))
   }
 
+  const removeTask = ({ taskId }: { taskId: string }) => {
+    setTasks(tasks.filter(t => taskId !== t.id))
+  }
+
   const checkTask = ({ taskId }: { taskId: string }) => {
     setTasks(tasks.map((t) => {
       if (t.id === taskId) {
@@ -64,6 +69,7 @@ export function TasksProvider({ children }: ProviderProps) {
         tasks,
         handleTask,
         finishTasks,
+        removeTask,
         checkTask
       }}
     >
