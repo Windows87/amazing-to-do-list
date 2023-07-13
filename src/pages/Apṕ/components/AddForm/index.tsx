@@ -33,7 +33,7 @@ const AddForm = () => {
     <Card>
       <Form onSubmit={handleSubmit}>
         <Input placeholder='Tarefa' value={description} onChange={handleInputChange} />
-        <Button disabled={verifyFields()}>Continuar</Button>
+        <Button disabled={verifyFields()}>Adicionar</Button>
       </Form>
     </Card>
   )

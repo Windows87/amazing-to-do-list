@@ -45,6 +45,7 @@ export function TasksProvider({ children }: ProviderProps) {
       if (t.id === taskId) {
         t.concluded = !t.concluded
       }
+      saveTasksOnLocalStorage(tasks)
       return t
     }))
   }
