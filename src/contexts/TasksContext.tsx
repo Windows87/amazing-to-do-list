@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from 'uuid'
 
 interface Value {
   tasks: Task[]
-  addNewTask: ({ description }: { description: string }) => void
+  handleTask: ({ description }: { description: string }) => void
+  finishTasks: () => void
+  checkTask: ({ taskId }: { taskId: string }) => void
 }
 
 interface ProviderProps {
@@ -21,7 +23,7 @@ export function TasksProvider({ children }: ProviderProps) {
     setTasks(tasks)
   }, [])
 
-  const addNewTask = ({ description }: { description: string }) => {
+  const handleTask = ({ description }: { description: string }) => {
     const newTask: Task = {
       id: uuidv4(),
       description,
@@ -32,6 +34,19 @@ export function TasksProvider({ children }: ProviderProps) {
 
     setTasks([newTask, ...tasks])
     saveTasksOnLocalStorage(newTasks)
+  }
+
+  const finishTasks = () => {
+    setTasks(tasks.filter(t => !t.concluded))
+  }
+
+  const checkTask = ({ taskId }: { taskId: string }) => {
+    setTasks(tasks.map((t) => {
+      if (t.id === taskId) {
+        t.concluded = !t.concluded
+      }
+      return t
+    }))
   }
 
   const readTasksFromLocalStorage = () => {
@@ -46,7 +61,9 @@ export function TasksProvider({ children }: ProviderProps) {
     <TasksContext.Provider
       value={{
         tasks,
-        addNewTask,
+        handleTask,
+        finishTasks,
+        checkTask
       }}
     >
       {children}

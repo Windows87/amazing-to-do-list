@@ -6,6 +6,8 @@ const Card = styled.div`
   width: 90%;
   max-width: 800px;
   border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
 `
 
 export default Card
