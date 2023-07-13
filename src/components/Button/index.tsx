@@ -11,7 +11,7 @@ const Button = styled.button`
   padding-right: 60px;
   font-size: 16px;
   &:hover {
-    cursor: pointer; /* Cursor ao passar o mouse */
+    cursor: pointer;
   }
 `
 

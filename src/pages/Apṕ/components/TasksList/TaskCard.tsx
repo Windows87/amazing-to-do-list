@@ -1,4 +1,4 @@
-import Card from '../../../../components/Card'
+import { Card, StyledButton } from '../../../../components/Card'
 import { useTasks } from '../../../../contexts/TasksContext'
 
 interface Props {
@@ -17,7 +17,7 @@ const TaskCard: React.FC<Props> = ({ task }: Props) => {
     <Card>
       <input type='checkbox' checked={task.concluded} onClick={() => { checkTask({ taskId: task.id }) }} />
       <p style={taskTextStyle}>{task.description}</p>
-      <button onClick={() => { removeTask({ taskId: task.id }) }}>x</button>
+      <StyledButton onClick={() => { removeTask({ taskId: task.id }) }}>x</StyledButton>
     </Card>
   )
 }

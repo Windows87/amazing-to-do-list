@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import Button from '../../../../components/Button'
-import Card from '../../../../components/Card'
+import { Card } from '../../../../components/Card'
 import Input from '../../../../components/Input'
 import { useTasks } from '../../../../contexts/TasksContext'
 import Form from './Form'
