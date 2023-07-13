@@ -7,7 +7,7 @@ import Form from './Form'
 
 const AddForm = () => {
   const [description, setDescription] = useState('')
-  const { addNewTask } = useTasks()
+  const { handleTask } = useTasks()
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setDescription(event.target.value)
@@ -15,7 +15,7 @@ const AddForm = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    addNewTask({ description })
+    handleTask({ description })
     clearForm()
   }
 
