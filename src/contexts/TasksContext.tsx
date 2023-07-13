@@ -38,11 +38,15 @@ export function TasksProvider({ children }: ProviderProps) {
   }
 
   const finishTasks = () => {
-    setTasks(tasks.filter(t => !t.concluded))
+    const updatedTasks = tasks.filter(t => !t.concluded);
+    setTasks(updatedTasks);
+    saveTasksOnLocalStorage(updatedTasks);
   }
 
   const removeTask = ({ taskId }: { taskId: string }) => {
-    setTasks(tasks.filter(t => taskId !== t.id))
+    const updatedTasks = tasks.filter(t => taskId !== t.id);
+    setTasks(updatedTasks);
+    saveTasksOnLocalStorage(updatedTasks);
   }
 
   const checkTask = ({ taskId }: { taskId: string }) => {
