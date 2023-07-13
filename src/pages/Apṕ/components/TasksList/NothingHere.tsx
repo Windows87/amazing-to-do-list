@@ -1,11 +1,11 @@
 import { styled } from 'styled-components'
 
-const NothingHere = () => <p>Não temos nada aqui ainda :(</p>
-
-const StyledNothingHere = styled(NothingHere)`
+const StyledNothingHere = styled.p`
   color: white;
   margin: 0;
   margin-top: 12px;
 `
 
-export default StyledNothingHere
+const NothingHere = () => <StyledNothingHere>Não temos nada aqui ainda :(</StyledNothingHere>
+
+export default NothingHere
