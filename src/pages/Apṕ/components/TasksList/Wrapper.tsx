@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   margin-top: 12px;
   gap: 8px;
   color: white;
+  margin-bottom: 8px;
 `
 
 export default Wrapper

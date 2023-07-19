@@ -32,7 +32,7 @@ const AddForm = () => {
   return (
     <Card>
       <Form onSubmit={handleSubmit}>
-        <Input placeholder='Tarefa' value={description} onChange={handleInputChange} />
+        <Input placeholder='Tarefa' value={description} onChange={handleInputChange} data-test='new-task-input' />
         <Button disabled={verifyFields()}>Adicionar</Button>
       </Form>
     </Card>
