@@ -31,6 +31,12 @@ jobs:
      - name: Checkout GitCode
        uses: actions/checkout@v2
  
+     - name: Install dependencies
+       run: npm install
+ 
+     - name: Start
+       run: npm start
+ 
      - name: Run Cypress Test
        uses: cypress-io/github-action@v4
        with:
