@@ -6,18 +6,30 @@ interface Props {
 }
 
 const TaskCard: React.FC<Props> = ({ task }: Props) => {
-  const { checkTask, removeTask } = useTasks();
+  const { checkTask, removeTask } = useTasks()
 
   const taskTextStyle = {
     textDecoration: task.concluded ? 'line-through' : 'none',
-    color: task.concluded ? 'green' : 'inherit'
-  };
+    color: task.concluded ? 'green' : 'inherit',
+  }
 
   return (
     <Card>
-      <input type='checkbox' checked={task.concluded} onClick={() => { checkTask({ taskId: task.id }) }} />
+      <input
+        type='checkbox'
+        checked={task.concluded}
+        onClick={() => {
+          checkTask({ taskId: task.id })
+        }}
+      />
       <p style={taskTextStyle}>{task.description}</p>
-      <StyledButton onClick={() => { removeTask({ taskId: task.id }) }}>x</StyledButton>
+      <StyledButton
+        onClick={() => {
+          removeTask({ taskId: task.id })
+        }}
+      >
+        x
+      </StyledButton>
     </Card>
   )
 }
