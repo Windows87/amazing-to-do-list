@@ -28,8 +28,10 @@ npx cypress open
 
 ### Onde o Webapp está disponível?
 
-Pode ser acessado (clicando aqui)[https://amazing-to-do-list-kappa.vercel.app/]. Aqui uma print do webapp:
+Pode ser acessado [clicando aqui](https://amazing-to-do-list-kappa.vercel.app/). Aqui uma print do webapp:
 
 ![image](https://github.com/Windows87/amazing-to-do-list/assets/25728217/4b59c27b-ca68-424f-bfd3-6f96c18d437d)
 
+### Contribuições
 
+Desenvolvido por [Yuri Faria](https://www.linkedin.com/in/yfaria/), [Victor Hugo](https://github.com/otorugo) e [Theo](https://github.com/theosant).
