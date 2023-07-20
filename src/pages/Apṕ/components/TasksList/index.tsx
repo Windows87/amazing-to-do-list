@@ -12,12 +12,18 @@ const TasksList = () => {
   if (isTasksEmpty) return <StyledNothingHere />
 
   return (
-    <Wrapper>
-      {tasks.map((task: Task) => (
-        <TaskCard key={task.id} task={task} />
-      ))}
-      {tasks && <Button onClick={finishTasks}>Remover Tarefas Concluídas</Button>}
-    </Wrapper>
+    <>
+      <Wrapper data-test='task-list'>
+        {tasks.map((task: Task) => (
+          <TaskCard key={task.id} task={task} />
+        ))}
+      </Wrapper>
+      {tasks && (
+        <Button onClick={finishTasks} data-test='remove-done-tasks-button'>
+          Remover Tarefas Concluídas
+        </Button>
+      )}
+    </>
   )
 }
 

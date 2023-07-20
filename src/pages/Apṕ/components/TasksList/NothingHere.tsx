@@ -6,6 +6,6 @@ const StyledNothingHere = styled.p`
   margin-top: 12px;
 `
 
-const NothingHere = () => <StyledNothingHere>Não temos nada aqui ainda :(</StyledNothingHere>
+const NothingHere = () => <StyledNothingHere data-test='nothing-here'>Não temos nada aqui ainda :(</StyledNothingHere>
 
 export default NothingHere

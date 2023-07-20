@@ -30,9 +30,11 @@ jobs:
    steps:
      - name: Checkout GitCode
        uses: actions/checkout@v2
- 
-     - name: Run Cypress Test
-       uses: cypress-io/github-action@v4
+
+     - name: Cypress run
+       uses: cypress-io/github-action@v3
        with:
-         command: npx cypress run
-         browser: chrome
+          browser: chrome
+          build: npm run build
+          start: npm start
+          wait-on: "http://localhost:3000"
