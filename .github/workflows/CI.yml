@@ -30,9 +30,6 @@ jobs:
    steps:
      - name: Checkout GitCode
        uses: actions/checkout@v2
- 
-     - name: Install dependencies
-       run: npm install
 
      - name: Cypress run
        uses: cypress-io/github-action@v3
