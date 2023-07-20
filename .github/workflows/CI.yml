@@ -34,10 +34,10 @@ jobs:
      - name: Install dependencies
        run: npm install
 
-     - name: Run Cypress Test
-       uses: cypress-io/github-action@v4
+     - name: Cypress run
+       uses: cypress-io/github-action@v3
        with:
-         build: npm run build
-         start: npm start
-         command: npx cypress run
-         browser: chrome
+          browser: chrome
+          build: npm run build
+          start: npm start
+          wait-on: "http://localhost:3000"
