@@ -10,6 +10,7 @@ const Button = styled.button`
   padding-left: 60px;
   padding-right: 60px;
   font-size: 16px;
+  font-family: Montserrat;
   &:hover {
     cursor: pointer;
   }
