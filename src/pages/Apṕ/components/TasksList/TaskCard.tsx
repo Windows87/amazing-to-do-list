@@ -18,6 +18,7 @@ const TaskCard: React.FC<Props> = ({ task }: Props) => {
   return (
     <Card>
       <Checkbox
+        className='task-card-checkbox'
         checked={task.concluded}
         borderRadius={100}
         style={{
