@@ -1,5 +1,7 @@
 import { Card, StyledButton } from '../../../../components/Card'
 import { useTasks } from '../../../../contexts/TasksContext'
+// @ts-expect-error
+import Checkbox from 'react-custom-checkbox'
 
 interface Props {
   task: Task
@@ -15,10 +17,26 @@ const TaskCard: React.FC<Props> = ({ task }: Props) => {
 
   return (
     <Card>
-      <input
-        type='checkbox'
+      <Checkbox
+        className='task-card-checkbox'
         checked={task.concluded}
-        onClick={() => {
+        borderRadius={100}
+        style={{
+          backgroundColor: '#515151',
+        }}
+        borderColor={'transparent'}
+        icon={
+          <div
+            style={{
+              display: 'flex',
+              flex: 1,
+              backgroundColor: '#0C9200',
+              alignSelf: 'stretch',
+              borderRadius: 100,
+            }}
+          ></div>
+        }
+        onChange={() => {
           checkTask({ taskId: task.id })
         }}
       />

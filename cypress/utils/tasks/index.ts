@@ -15,7 +15,7 @@ export function verifyIfTaskWasAdded(taskName: string) {
 }
 
 export function markFirstTaskAsDone() {
-  cy.get('[data-test="task-list"]').children().first().find('input[type="checkbox"]').click()
+  cy.get('[data-test="task-list"]').children().first().find('[class="task-card-checkbox"]').click()
 }
 
 export function verifyIfFirstTaskIsDone() {
@@ -35,7 +35,7 @@ export function verifyIfFirstTaskIsUndone() {
 }
 
 export function markFirstTaskAsUndone() {
-  cy.get('[data-test="task-list"]').children().first().get('input[type="checkbox"]').click()
+  cy.get('[data-test="task-list"]').children().first().get('[class="task-card-checkbox"]').click()
 }
 
 export function removeFirstTask() {
