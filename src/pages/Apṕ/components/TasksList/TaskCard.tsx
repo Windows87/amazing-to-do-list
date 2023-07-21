@@ -12,7 +12,8 @@ const TaskCard: React.FC<Props> = ({ task }: Props) => {
 
   const taskTextStyle = {
     textDecoration: task.concluded ? 'line-through' : 'none',
-    color: task.concluded ? 'green' : 'inherit',
+    color: task.concluded ? 'green' : 'white',
+    fontFamily: 'Montserrat',
   }
 
   return (
