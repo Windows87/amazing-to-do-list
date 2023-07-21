@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   background-color: transparent;
   color: white;
+  font-family: Montserrat;
 `
 export const Card = styled.div`
   padding: 16px;
