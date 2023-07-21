@@ -30,7 +30,7 @@ Caso queira visualizar o Storybook:
 
 ```bash
 npm install
-npx cypress dev
+npx storybook dev
 ```
 
 ### Onde o Webapp está disponível?
