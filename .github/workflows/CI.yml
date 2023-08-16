@@ -29,10 +29,8 @@ jobs:
    name: RTL
    runs-on: ubuntu-latest
    steps:
-      - name: Begin rtl
+      - name: Checkout GitCode
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
           
       - name: Use Node 16
         uses: actions/setup-node@v1
