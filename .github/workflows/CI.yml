@@ -25,6 +25,19 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+  RTL:
+   runs-on: ubuntu-latest
+   steps:
+      - name: Use Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Npm Test
+        run: npm test
   CypressTest:
    runs-on: ubuntu-latest
    steps:
