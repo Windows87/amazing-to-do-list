@@ -11,16 +11,17 @@ interface Value {
 
 interface ProviderProps {
   children: React.ReactNode[] | React.ReactNode
+  tasks?: Task[]
 }
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 const TasksContext = createContext({} as Value)
 
-export function TasksProvider({ children }: ProviderProps) {
+export function TasksProvider({ children, tasks: defaultTasks }: ProviderProps) {
   const [tasks, setTasks] = useState<Task[]>([])
 
   useEffect(() => {
-    const tasks = readTasksFromLocalStorage()
+    const tasks = defaultTasks ?? readTasksFromLocalStorage()
     setTasks(tasks)
   }, [])
 
